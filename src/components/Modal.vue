@@ -1,5 +1,4 @@
 <template>
-  <!-- Teleport — Modal-ды body-ға рендерлейміз, z-index мәселелерін болдырмау үшін -->
   <Teleport to="body">
     <Transition name="ui-modal">
       <div v-if="modelValue" class="ui-modal-overlay" @click.self="$emit('update:modelValue', false)">

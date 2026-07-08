@@ -1,15 +1,16 @@
 {
   "name": "ku-ui-kit",
-  "version": "1.0.9",
+  "version": "1.1.2",
   "description": "A Vue 3 UI component library for building modern web applications.",
-  "main": "./dist/vue-ui-kit.umd.js",
-  "module": "./dist/vue-ui-kit.es.js",
+  "main": "./dist/ku-ui-kit.umd.js",
+  "module": "./dist/ku-ui-kit.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-ui-kit.es.js",
-      "require": "./dist/vue-ui-kit.umd.js"
+      "import": "./dist/ku-ui-kit.es.js",
+      "require": "./dist/ku-ui-kit.umd.js"
     },
-    "./style.css": "./dist/assets/styles/tokens.css"
+    "./style.css": "./dist/style.css",
+    "./tokens.css": "./dist/tokens.css"
   },
   "files": [
     "dist"

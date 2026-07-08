@@ -135,7 +135,7 @@ import 'ku-ui-kit/style.css'      // 1) default тема
 import './my-brand-tokens.css'    // 2) өз брендің (соңғы импорт жеңеді)
 ```
 
-Толық токен тізімін `node_modules/ku-ui-kit/dist/style.css` файлынан көруге болады.
+Толық токен тізімін `node_modules/ku-ui-kit/dist/tokens.css` файлынан көруге болады.
 
 ## Dark mode
 

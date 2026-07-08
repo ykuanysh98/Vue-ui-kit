@@ -1,19 +1,30 @@
-// ─── Badge ────────────────────────────────────────────────────────────────────
 import Badge from '../components/Badge.vue'
+import '../assets/styles/tokens.css'
 
-export default { title: 'Components/Badge', component: Badge, tags: ['autodocs'] }
+export default {
+  title: 'Components/Badge',
+  component: Badge,
+  tags: ['autodocs'],
+  argTypes: {
+    variant:  { control: 'select', options: ['primary', 'success', 'warning', 'danger', 'neutral'] },
+    size:     { control: 'select', options: ['sm', 'md', 'lg'] },
+    dot:      { control: 'boolean' },
+    outline:  { control: 'boolean' },
+    removable:{ control: 'boolean' },
+  },
+}
 
-export const AllBadges = {
-  render: () => ({
+export const Playground = {
+  args: {
+    variant:  'primary',
+    size:     'md',
+    dot:      false,
+    outline:  false,
+    removable: false,
+  },
+  render: (args) => ({
     components: { Badge },
-    template: `
-      <div style="display:flex;gap:10px;align-items:center">
-        <Badge variant="primary">Primary</Badge>
-        <Badge variant="success">Success</Badge>
-        <Badge variant="warning">Warning</Badge>
-        <Badge variant="danger">Danger</Badge>
-        <Badge variant="neutral">Neutral</Badge>
-      </div>
-    `,
+    setup: () => ({ args }),
+    template: `<Badge v-bind="args">Label</Badge>`,
   }),
 }

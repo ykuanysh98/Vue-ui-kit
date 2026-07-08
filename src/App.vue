@@ -2,5 +2,5 @@
 </script>
 
 <template>
-   HelloWorld 
+   HelloWorld
 </template>

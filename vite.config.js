@@ -13,11 +13,14 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [vue()],
+  publicDir: false,
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.js'),
-      name: 'VueUiKit',
-      fileName: format => `vue-ui-kit.${format}.js`
+      name: 'KuUiKit',
+      fileName: format => `ku-ui-kit.${format}.js`,
+      formats: ['es', 'umd'],      
+      cssFileName: 'style',
     },
     rollupOptions: {
       external: ['vue'],

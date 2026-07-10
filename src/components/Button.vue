@@ -28,7 +28,7 @@ defineProps({
   variant: {
     type: String,
     default: 'primary',
-    validator: (v) => ['primary', 'secondary', 'danger', 'ghost', 'soft'].includes(v),
+    validator: (v) => ['primary', 'secondary', 'danger', 'success', 'ghost', 'soft'].includes(v),
   },
   size: {
     type: String,
@@ -109,6 +109,20 @@ defineProps({
 .ku-btn--primary:hover:not(:disabled) {
   background: var(--ku-accent-hover, #5A52E0);
   box-shadow: var(--ku-shadow-md, 0 4px 16px rgba(108,99,255,0.10), 0 2px 6px rgba(0,0,0,0.04));
+}
+
+/* Success */
+.ku-btn--success {
+  background: var(--ku-success, #10B981);
+  color: #fff;
+  box-shadow: var(--ku-shadow-sm, 0 1px 3px rgba(16,185,129,0.06), 0 1px 2px rgba(0,0,0,0.04));
+}
+.ku-btn--success:hover:not(:disabled) {
+  background: var(--ku-success-hover, #059669);
+  box-shadow: var(--ku-shadow-md, 0 4px 16px rgba(16,185,129,0.10), 0 2px 6px rgba(0,0,0,0.04));
+}
+.ku-btn--success:focus-visible {
+  box-shadow: var(--ku-shadow-success, 0 0 0 3px rgba(16, 185, 129, 0.25));
 }
 
 /* Soft — accent түсі жұмсақ фонмен */

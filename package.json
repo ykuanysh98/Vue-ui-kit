@@ -1,16 +1,16 @@
 {
-  "name": "ku-vue-ui-kit",
-  "version": "1.0.1",
+  "name": "ku-ui-kit",
+  "version": "1.1.3",
   "description": "A Vue 3 UI component library for building modern web applications.",
-  "type": "module",
-  "main": "./dist/vue-ui-kit.umd.js",
-  "module": "./dist/vue-ui-kit.es.js",
+  "main": "./dist/ku-ui-kit.umd.js",
+  "module": "./dist/ku-ui-kit.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-ui-kit.es.js",
-      "require": "./dist/vue-ui-kit.umd.js"
+      "import": "./dist/ku-ui-kit.es.js",
+      "require": "./dist/ku-ui-kit.umd.js"
     },
-    "./style.css": "./dist/style.css"
+    "./style.css": "./dist/style.css",
+    "./tokens.css": "./dist/tokens.css"
   },
   "files": [
     "dist"
@@ -21,7 +21,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "publish": "npm publish"
+    "npm:login": "npm whoami || npm login",
+    "npm:publish": "npm publish --access public"
   },
   "dependencies": {
     "vue": "^3.5.34"
